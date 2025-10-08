@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Mayron Muniz - Desenvolvedor & Diretor de Tecnologia</title>
+    <!-- Carrega Tailwind CSS (framework) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carrega nosso CSS personalizado (Tema Matrix) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- CANVAS PARA O EFEITO MATRIX (FUNDO) -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Container Principal do CV (CONTEÚDO) -->
+    <div class="cv-content max-w-6xl mx-auto my-8 p-6 shadow-xl rounded-xl">
+        
+        <!-- HEADER e Contato (Barra Lateral) -->
+        <header class="md:grid md:grid-cols-3 gap-8">
+            
+            <!-- Barra Lateral (INFO PESSOAIS) - Coluna 1 -->
+            <div class="sidebar-mobile md:col-span-1 bg-dark-green p-6 rounded-lg shadow-inner flex flex-col items-center text-center">
+                
+                <!-- Foto de Perfil (Substitua o link abaixo pela sua foto hospedada!) -->
+                <div class="photo-container">
+                    <!-- ARQUIVO DE FOTO CONFIGURADO: FOTO-DE-PERFIL-CV-MAYRON-MUNIZ.PNG -->
+                    <img src="FOTO-DE-PERFIL-CV-MAYRON-MUNIZ.PNG" alt="Foto de Perfil de Mayron Muniz">
+                </div>
+
+                <!-- DADOS PESSOAIS -->
+                <p class="text-xs text-white mt-4 mb-0">Estado Civil: Solteiro | Localidade: São Luís - MA | Idade: 32 anos</p>
+
+                <hr class="w-full border-neon-green my-6">
+
+                <!-- Contato e Dados Pessoais -->
+                <section class="w-full text-left">
+                    <h2 class="text-lg font-bold text-neon-green mb-3 border-b-2 border-neon-green">CONTATO & DADOS</h2>
+                    <ul class="space-y-2 text-sm text-white">
+                        
+                        <!-- BOTÃO WHATSAPP -->
+                        <li class="pt-2">
+                            <a href="https://wa.me/5598992237178" target="_blank"
+                                class="contact-button w-full inline-flex items-center justify-center 
+                                       bg-black text-neon-green hover:text-white font-bold 
+                                       py-2 px-4 rounded-full border border-neon-green text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12c0 3.326 1.623 6.304 4.09 8.077l-1.077 3.315 3.315-1.077C9.696 22.377 12.674 24 16 24c5.523 0 10-4.477 10-10S21.523 2 16 2zm2 14.5c-.328.058-.656.087-.984.087h-1.016c-.52 0-.853-.263-.853-.559v-1.792c0-.296.113-.592.408-.682l.942-.289c.14-.044.253-.162.253-.306v-.587c0-.144-.09-.289-.253-.306l-.942-.289c-.296-.09-.408-.386-.408-.682v-.386c0-.296.333-.559.853-.559h1.016c.328 0 .656.03.984.087c.328.058.656.116.984.174l.942.289c.14.044.253.162.253.306v.587c0 .144.09.289.253.306l-.942-.289c.296.09.408.386.408.682v.386c0 .296-.333.559-.853.559h-1.016c.328 0-.656-.03-.984-.087c-.328-.058-.656-.116-.984-.174l-.942-.289c-.14-.044-.253-.162-.253-.306v-.587c0-.144-.09-.289-.253-.306l-.942-.289c-.296-.09-.408-.386-.408-.682v-.386c0-.296.333-.559.853-.559h1.016c.328 0 .656.03.984.087zM16 4.5c5.24 0 9.5 4.26 9.5 9.5S21.24 23.5 16 23.5 6.5 19.24 6.5 14s4.26-9.5 9.5-9.5z"/>
+                                </svg>
+
+                                CONVERSAR NO WHATSAPP
+                            </a>
+                        </li>
+                        
+                        <!-- BOTÃO DE E-MAIL -->
+                        <li class="pt-2">
+                            <a href="mailto:mayronmunizdemelo@gmail.com" target="_blank"
+                                class="contact-button w-full inline-flex items-center justify-center 
+                                       bg-black text-neon-green hover:text-white font-bold 
+                                       py-2 px-4 rounded-full border border-neon-green text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                                ENVIAR E-MAIL
+                            </a>
+                        </li>
+                        
+                        <!-- BOTÃO LINKEDIN -->
+                        <li class="pt-2">
+                            <a href="https://www.linkedin.com/in/mayronmuniz" target="_blank"
+                                class="contact-button w-full inline-flex items-center justify-center 
+                                       bg-black text-neon-green hover:text-white font-bold 
+                                       py-2 px-4 rounded-full border border-neon-green text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                    <path d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 6-6h4z"></path>
+                                    <path d="M10 21v-7a6 6 0 0 1 6-6h4v7"></path>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                                VISITAR LINKEDIN
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <hr class="w-full border-neon-green my-6">
+
+                <!-- Habilidades Chave - ALTERADO PARA CASCATA -->
+                <section class="w-full text-left">
+                    <h2 class="text-lg font-bold text-neon-green mb-3 border-b-2 border-neon-green">HABILIDADES GERAIS</h2>
+                    <!-- Removida a classe flex e substituída por ul/li para empilhamento natural -->
+                    <ul class="space-y-2">
+                        <li><span class="bg-black text-white text-xs font-medium px-2.5 py-0.5 rounded-full block text-center">Proatividade</span></li>
+                        <li><span class="bg-black text-white text-xs font-medium px-2.5 py-0.5 rounded-full block text-center">Inovação</span></li>
+                        <li><span class="bg-black text-white text-xs font-medium px-2.5 py-0.5 rounded-full block text-center">Foco</span></li>
+                        <li><span class="bg-black text-white text-xs font-medium px-2.5 py-0.5 rounded-full block text-center">Comunicação</span></li>
+                        <li><span class="bg-black text-white text-xs font-medium px-2.5 py-0.5 rounded-full block text-center">Organização</span></li>
+                    </ul>
+                </section>
+                
+                <hr class="w-full border-neon-green my-6">
+
+                <!-- Idiomas -->
+                <section class="w-full text-left">
+                    <h2 class="text-lg font-bold text-neon-green mb-3 border-b-2 border-neon-green">IDIOMAS</h2>
+                    <ul class="text-sm text-white space-y-1">
+                        <li>Português: Fluente</li>
+                        <li>Inglês: Intermediário</li>
+                        <li>Espanhol: Intermediário</li>
+                    </ul>
+                </section>
+                
+            </div>
+            
+            <!-- Conteúdo Principal - Coluna 2 e 3 -->
+            <div class="md:col-span-2 space-y-8 mt-8 md:mt-0">
+                
+                <!-- Nome em Destaque no Topo da Seção Principal -->
+                <div class="mb-8 border-b-4 border-neon-green pb-2">
+                    <h1 class="text-5xl font-extrabold text-neon-green mb-1">MAYRON MUNIZ</h1>
+                    <p class="text-white font-semibold">Especialista em Geração de Valor & Diretor de Tecnologia</p>
+                </div>
+
+                <!-- SOBRE -->
+                <section>
+                    <h2 class="text-2xl font-bold text-neon-green mb-3 border-b-4 border-neon-green pb-1">SOBRE MIM</h2>
+                    <p class="text-white leading-relaxed text-base">
+                        Sou Mayron Muniz, especialista em <strong>geração de valor</strong>, otimização de processos produtivos e solução de problemas. Como um profissional multifuncional e multitarefas, busco inovação, criatividade e excelência. Estou disposto a ser o melhor naquilo que faço, acreditando que o mapeamento de talentos é chave para o sucesso empresarial.
+                    </p>
+                </section>
+
+                <!-- EXPERIÊNCIA -->
+                <section>
+                    <h2 class="text-2xl font-bold text-neon-green mb-4 border-b-4 border-neon-green pb-1">EXPERIÊNCIA PROFISSIONAL</h2>
+
+                    <!-- Exp 1: ProOne Edtech -->
+                    <div class="mb-6 p-4 border border-neon-green rounded-lg bg-dark-green shadow-sm">
+                        <h3 class="text-xl font-semibold text-neon-green">Fundador & Diretor de Tecnologia</h3>
+                        <p class="text-sm text-white font-medium">ProOne Edtech | Janeiro 2022 - Presente</p>
+                        <ul class="list-disc list-inside text-white text-sm mt-2 space-y-1">
+                            <li>Concepção, desenvolvimento e gestão de uma plataforma EAD, imersiva, interativa e disruptiva.</li>
+                            <li>Liderança na inovação e otimização de processos produtivos.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Exp 2: Algoritmados -->
+                    <div class="p-4 border border-neon-green rounded-lg bg-dark-green shadow-sm">
+                        <h3 class="text-xl font-semibold text-neon-green">Fundador & Desenvolvedor de Projetos</h3>
+                        <p class="text-sm text-white font-medium">Algoritmados | Setembro 2025 - Presente</p>
+                        <ul class="list-disc list-inside text-white text-sm mt-2 space-y-1">
+                            <li>Fundação da iniciativa composta por graduandos para executar projetos práticos e desenvolver soluções de software inovadoras.</li>
+                            <li>Foco em preencher lacunas do mercado com soluções tecnológicas.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- HABILIDADES TÉCNICAS E CONHECIMENTOS -->
+                <section>
+                    <h2 class="text-2xl font-bold text-neon-green mb-4 border-b-4 border-neon-green pb-1">HABILIDADES TÉCNICAS</h2>
+                    <div class="space-y-4 text-white">
+                        
+                        <!-- Desenvolvimento Web -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-neon-green">Desenvolvimento & Infraestrutura Web</h3>
+                            <p class="text-sm">Conhecimentos básicos em <strong>HTML, CSS, JavaScript e Python</strong>; intermediário em Desenvolvimento Web, Zona de DNS, Domínios, Subdomínios, Wordpress.org e Moodle.</p>
+                        </div>
+
+                        <!-- IA e Automação -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-neon-green">Inteligência Artificial & Automação</h3>
+                            <p class="text-sm">Conhecimento intermediário em IAs Generativas (ChatGPT, Gemini, Leonardo AI) e ferramentas de automação (Macro Recorder Pro).</p>
+                        </div>
+                        
+                        <!-- Sistemas Operacionais -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-neon-green">Sistemas Operacionais & Hardware</h3>
+                            <p class="text-sm">Proficiência em <strong>Windows</strong> (7, 10, 11) e noções básicas em <strong>Distribuições Linux</strong> (Ubuntu, Linux Mint, Wifislax), incluindo manuseio de comandos essenciais, instalação de repositórios, configuração de aplicações (como o Wine) e uso de *scripts* em seus respectivos sistemas. Experiência prática em manutenção e otimização de *hardware*.</p>
+                        </div>
+
+                        <!-- Web 3.0 -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-neon-green">Tecnologias Avançadas & Ativos Digitais</h3>
+                            <p class="text-sm">Experiência transacional em operações com <strong>Web 3.0</strong>, Blockchain, NFTs, <strong>Day trader</strong> e <strong>Mercados Futuros</strong>. Amplo conhecimento em manuseio de carteiras digitais e *exchanges* (Binance, MEXC).</p>
+                        </div>
+
+                    </div>
+                </section>
+                
+                <!-- FORMAÇÃO -->
+                <section>
+                    <h2 class="text-2xl font-bold text-neon-green mb-4 border-b-4 border-neon-green pb-1">FORMAÇÃO ACADÊMICA</h2>
+                    <ul class="space-y-3 text-white">
+                        <!-- 1º Curso: Análise e Desenvolvimento de Sistemas (ADS) -->
+                        <li>
+                            <p class="font-semibold text-lg">Análise e Desenvolvimento de Sistemas</p>
+                            <p class="text-sm text-white">UNIFATECIE | 2025 - 2027</p>
+                        </li>
+                        <!-- 2º Curso: Engenharia de Software -->
+                        <li>
+                            <p class="font-semibold text-lg">Engenharia de Software</p>
+                            <p class="text-sm text-white">UNIFATECIE | 2025 - 2029</p>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </header>
+        
+        <!-- Rodapé simples para fechar o container -->
+        <footer class="footer-style mt-10 text-center text-xs border-t pt-4">
+            Curriculum Vitae criado por mayronmuniz.dev em HTML & CSS (Tailwind CSS)
+        </footer>
+    </div>
+
+    <!-- Carrega o JavaScript do Matrix no final do body para otimizar o carregamento -->
+    <script src="script.js"></script>
+</body>
+</html>
