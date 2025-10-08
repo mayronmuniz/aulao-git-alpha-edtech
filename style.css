@@ -3,13 +3,13 @@ body {
     font-family: 'Inter', sans-serif; 
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Fundo do corpo agora é Preto */
+    background-color: #FFFFFF; 
     overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Alinhamento superior */
     min-height: 100vh;
-    color: #FFFFFF; /* Cor de texto padrão Branco */
+    color: #000000; 
 }
 
 /* Container Principal do CV */
@@ -17,15 +17,15 @@ body {
     position: relative;
     z-index: 10;
     max-width: 6xl;
-    background-color: #000000; /* Fundo do conteúdo agora é Preto */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); /* Sombra simples */
-    border-color: #0218fa !important; /* Borda principal azul */
+    background-color: #FFFFFF; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); 
+    border-color: #333333 !important; 
 }
 
-/* Estilos de cor para o conteúdo */
-.text-custom-blue { color: #0218fa; } /* Cor dos títulos é Azul Elétrico */
-.bg-dark-sidebar { background-color: #1a1a1a; } /* Fundo da sidebar é cinza escuro para contraste */
-.border-custom-blue { border-color: #0218fa; } /* Borda azul */
+/* Estilos de cor para o conteúdo (Cinza Escuro é a nova cor de destaque) */
+.text-custom-blue { color: #333333; } 
+.bg-dark-sidebar { background-color: #f7f7f7; } 
+.border-custom-blue { border-color: #333333; } 
 
 /* Estilos específicos para a foto */
 .photo-container {
@@ -33,8 +33,8 @@ body {
     height: 150px;
     overflow: hidden;
     border-radius: 50%; 
-    border: 3px solid #0218fa; /* Borda da foto é Azul Elétrico */
-    box-shadow: 0 0 5px rgba(2, 24, 250, 0.8); /* Brilho azul suave */
+    border: 3px solid #333333; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
     margin-bottom: 1.5rem;
 }
 .photo-container img {
@@ -45,18 +45,32 @@ body {
 
 /* Estilizando badges e fundos para o tema */
 .footer-style {
-    color: #4b5563; /* Cor cinza para o rodapé */
-    border-top: 1px solid #1a1a1a;
+    color: #4b5563; 
+    border-top: 1px solid #e5e7eb;
 }
+
+/* Estilização específica para garantir que o texto das seções (que usa 'text-white' no HTML) seja PRETO no novo tema */
+/* Usamos !important para sobrescrever classes inline ou Tailwind */
+.text-white, .cv-content p, .cv-content li {
+    color: #000000 !important; 
+}
+.text-custom-blue {
+    color: #333333 !important;
+}
+
 
 /* ESTILO PARA BOTÕES DE CONTATO */
 .contact-button {
     transition: all 0.3s ease;
-    background-color: #0218fa; /* Botões em fundo Azul Elétrico */
-    color: #FFFFFF !important; /* Texto branco */
-    border-color: #0218fa;
+    /* Fundo preto/cinza escuro */
+    background-color: #333333; 
+    /* Texto branco */
+    color: #FFFFFF !important; 
+    border-color: #333333;
 }
 .contact-button:hover {
-    background-color: #4b5563; /* Fundo mais escuro ao passar o mouse */
-    box-shadow: 0 0 10px #0218fa; /* Brilho azul no hover */
+    /* Fundo ligeiramente mais claro para efeito de destaque */
+    background-color: #555555; 
+    /* Sombra neutra mais forte para indicar interação */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
