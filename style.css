@@ -1,42 +1,31 @@
 /* Define a fonte padrão para o corpo */
 body { 
-    font-family: 'Inter', monospace; /* Fonte monoespaçada para o efeito hacker */
+    font-family: 'Inter', sans-serif; 
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Fundo preto */
+    background-color: #000000; /* Fundo do corpo agora é Preto */
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinhamento superior */
     min-height: 100vh;
-    color: #FFFFFF; /* Cor padrão do texto agora é branco */
+    color: #FFFFFF; /* Cor de texto padrão Branco */
 }
 
-/* O Canvas do Matrix ficará no fundo absoluto */
-#matrix-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Fica atrás do conteúdo */
-}
-
-/* Container Principal do CV flutuará acima do canvas */
+/* Container Principal do CV */
 .cv-content {
     position: relative;
-    z-index: 10; /* Fica na frente do canvas */
+    z-index: 10;
     max-width: 6xl;
-    /* Aumentando a transparência (de 0.85 para 0.5) para o Matrix aparecer mais */
-    background-color: rgba(0, 0, 0, 0.5); 
-    border: 1px solid #00A000; /* Borda verde */
-    backdrop-filter: blur(2px); /* Adiciona um leve desfoque no fundo para melhorar a leitura */
+    background-color: #000000; /* Fundo do conteúdo agora é Preto */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); /* Sombra simples */
+    border-color: #0218fa !important; /* Borda principal azul */
 }
 
 /* Estilos de cor para o conteúdo */
-.text-neon-green { color: #00FF00; } /* Verde neon brilhante (para títulos e destaque) */
-.bg-dark-green { background-color: rgba(0, 160, 0, 0.1); } /* Fundo levemente verde */
-.border-neon-green { border-color: #00A000; } 
+.text-custom-blue { color: #0218fa; } /* Cor dos títulos é Azul Elétrico */
+.bg-dark-sidebar { background-color: #1a1a1a; } /* Fundo da sidebar é cinza escuro para contraste */
+.border-custom-blue { border-color: #0218fa; } /* Borda azul */
 
 /* Estilos específicos para a foto */
 .photo-container {
@@ -44,8 +33,8 @@ body {
     height: 150px;
     overflow: hidden;
     border-radius: 50%; 
-    border: 4px solid #00FF00; /* Borda da foto em neon */
-    box-shadow: 0 0 15px #00FF00; /* Brilho neon */
+    border: 3px solid #0218fa; /* Borda da foto é Azul Elétrico */
+    box-shadow: 0 0 5px rgba(2, 24, 250, 0.8); /* Brilho azul suave */
     margin-bottom: 1.5rem;
 }
 .photo-container img {
@@ -54,28 +43,20 @@ body {
     object-fit: cover;
 }
 
-/* Ajuste de cor para elementos internos */
-/* Revertendo cores que eram escuras para o branco ou verde escuro */
-.text-gray-800 { color: #FFFFFF; } /* Cor do corpo do texto */
-.text-blue-600 { color: #FFFFFF; }
-.text-gray-700 { color: #FFFFFF; }
-.border-blue-400 { border-color: #00A000; }
-.text-blue-700 { color: #00FF00; }
-.text-blue-500 { color: #00FF00; }
-.text-sm { color: #FFFFFF; } /* Cor do texto pequeno também é branco */
-
 /* Estilizando badges e fundos para o tema */
 .footer-style {
-    color: #00A000;
-    border-top: 1px solid #00A000;
+    color: #4b5563; /* Cor cinza para o rodapé */
+    border-top: 1px solid #1a1a1a;
 }
 
 /* ESTILO PARA BOTÕES DE CONTATO */
 .contact-button {
     transition: all 0.3s ease;
-    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Sombra inicial verde */
+    background-color: #0218fa; /* Botões em fundo Azul Elétrico */
+    color: #FFFFFF !important; /* Texto branco */
+    border-color: #0218fa;
 }
 .contact-button:hover {
-    box-shadow: 0 0 20px #00FF00; /* Sombra mais intensa ao passar o mouse */
-    background-color: rgba(0, 255, 0, 0.1); /* Leve fundo verde */
+    background-color: #4b5563; /* Fundo mais escuro ao passar o mouse */
+    box-shadow: 0 0 10px #0218fa; /* Brilho azul no hover */
 }
